@@ -31,10 +31,10 @@ const valueChange=(event)=>{
   return (
     <div >
       <h1>Login Page</h1>
-      {login && (<h3>Welcome, user !</h3>)}
+      {login && (<p>Welcome, {username}!</p>)}
       {!login  && (
         <div>
-          {incorrect && (<h4>Invalid username and password </h4>)}
+          {incorrect && (<p className="error">Invalid username and password </p>)}
           <form onSubmit={handleSubmit}>
             <label for="username">Username:</label>
             <input type="text" value={username} name="username" onChange={valueChange} required></input><br></br>
