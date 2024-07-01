@@ -12,7 +12,7 @@ const [incorrect,setincorrect]= useState(false)
 
 const handleSubmit=(e)=>{
   e.preventDefault();
-  if(username==="Rishav" && password==="Qwerty@123" ){
+  if(username==="user" && password==="password" ){
     setlogin(true)
   }else{
     setlogin(false)
@@ -34,7 +34,7 @@ const valueChange=(event)=>{
       {login && (<p>Welcome, {username}!</p>)}
       {!login  && (
         <div>
-          {incorrect && (<p className="error">Invalid username and password </p>)}
+          {incorrect && (<p className="error">"Invalid username or password"</p>)}
           <form onSubmit={handleSubmit}>
             <label for="username">Username:</label>
             <input type="text" value={username} name="username" onChange={valueChange} required></input><br></br>
